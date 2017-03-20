@@ -43,7 +43,7 @@ app.post('/webhook/', function (req, res) {
 		var params = {
 			input: text,
 			//context: {"conversation_id": conversation_id}
-			context: {"conversation_id": "620471694726012"}
+			context: {"conversation_id": 620471694726012}
 		}
 
 		var payload = {
