@@ -7,7 +7,7 @@ var app = express();
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-var conversation_id = "";
+var conversation_id = 620471694726012;
 var w_conversation = watson.conversation({
     url: 'https://gateway.watsonplatform.net/conversation/api',
     username: process.env.CONVERSATION_USERNAME || '1a1fe739-93b3-4486-a9c0-f124c063eaf3',
@@ -42,8 +42,7 @@ app.post('/webhook/', function (req, res) {
 		
 		var params = {
 			input: text,
-			//context: {"conversation_id": conversation_id}
-			context: {"conversation_id": "620471694726012"}
+			context: {"conversation_id": conversation_id}
 		};
 
 		var payload = {
